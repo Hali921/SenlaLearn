@@ -3,10 +3,9 @@ INNER JOIN parts
 ON reviews.parts_id = parts.id;
 
 
-SELECT clients.firstname, lastname FROM clients
+SELECT clients.firstname, clients.lastname FROM clients
 INNER JOIN orders
-ON orders.client_id = clients.id
-WHERE orders.orders_date = "01-07-2024";
+ON orders.client_id = clients.id;
 
 
 SELECT manufacture.name FROM manufacture
