@@ -1,0 +1,22 @@
+package ru.models;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
+
+import java.util.Date;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Builder
+@Component
+public class Order {
+
+    private Integer id;
+    private Date date;
+    private Client client;
+    private Part part;
+}
