@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface ClientService {
     String execute();
+
     List<Client> getAllClients();
 
     void addClient(ClientDTO clientDTO);

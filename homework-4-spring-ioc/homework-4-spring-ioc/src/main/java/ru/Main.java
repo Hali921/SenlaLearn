@@ -5,7 +5,14 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import ru.config.MainConfiguration;
 import ru.controller.ClientController;
+import ru.controller.PartController;
 import ru.dto.ClientDTO;
+import ru.dto.PartDTO;
+import ru.models.Manufacture;
+import ru.models.Part;
+import ru.models.PartType;
+
+import java.util.SortedMap;
 
 
 public class Main {
@@ -17,6 +24,7 @@ public class Main {
         System.out.println(clientController.execute());
 
         //Методы ClientController
+        System.out.println("Client контроллер - ");
         System.out.println(clientController.getClient(1));
         clientController.addClient(new ClientDTO(
                 "Ildar", "Khaliullin", 500.0, "admin", "Opel"));
@@ -31,7 +39,27 @@ public class Main {
 
         System.out.println(clientController.getAllClients());
 
-        //
+        //Методы PartController
+        PartController partController = context.getBean(PartController.class);
+        System.out.println("Part контроллер - ");
+
+        System.out.println(partController.getPart(1));
+
+        partController.addPart(new PartDTO(new PartType(1,"wheel"),
+                new Manufacture(1, "ATE"), 4.0, 100, 20));
+        partController.addPart(new PartDTO(new PartType(1,"shock absorbers"),
+                new Manufacture(1, "MINTEX"), 4.5, 100, 70));
+
+        partController.updatePart(4, new PartDTO(new PartType(4,"wheel"),
+                new Manufacture(1, "ATE"), 3.7, 99, 20));
+
+        partController.deletePart(5);
+
+        System.out.println(partController.getAllParts());
+
+
+
+
 
     }
 }

@@ -12,12 +12,8 @@ import org.springframework.stereotype.Component;
 @Data
 @Builder
 @Component
-public class Part {
+public class PartType {
 
     private Integer id;
-    private PartType partType;
-    private Manufacture manufacture;
-    private Double rating;
-    private Integer quantity;
-    private Integer price;
+    private String name;
 }

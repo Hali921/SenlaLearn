@@ -1,23 +1,18 @@
-package ru.models;
-
+package ru.dto;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.stereotype.Component;
+import ru.models.Manufacture;
+import ru.models.PartType;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Data
-@Builder
-@Component
-public class Part {
+public class PartDTO {
 
-    private Integer id;
     private PartType partType;
     private Manufacture manufacture;
     private Double rating;
     private Integer quantity;
     private Integer price;
+
 }
