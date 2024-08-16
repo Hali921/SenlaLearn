@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+<databaseChangeLog
+   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
+      http://www.liquibase.org/xml/ns/pro 
+      http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd"
+      logicalFilePath="homework-2">  
+    
+    <changeSet id="homework-2-clients" author="Ildar Khaliullin">
+        <sqlFile encoding="utf8" path="./sql/01.create-clients-table.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-2-part_type" author="Ildar Khaliullin">
+        <sqlFile encoding="utf8" path="./sql/03.create-part_type-table.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-2-manufacture" author="Ildar Khaliullin">
+        <sqlFile encoding="utf8" path="./sql/04.create-manufacture-table.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-2-parts" author="Ildar Khaliullin">
+        <sqlFile encoding="utf8" path="./sql/02.create-parts-table.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-2-reviews" author="Ildar Khaliullin">
+        <sqlFile encoding="utf8" path="./sql/05.create-reviews-table.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+    <changeSet id="homework-2-orders" author="Ildar Khaliullin">
+        <sqlFile encoding="utf8" path="./sql/06.create-orders-table.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+
+
+
+</databaseChangeLog> 
