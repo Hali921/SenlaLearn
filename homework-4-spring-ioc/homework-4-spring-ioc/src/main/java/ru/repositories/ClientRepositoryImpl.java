@@ -12,10 +12,11 @@ import java.util.List;
 @Component
 public class ClientRepositoryImpl implements ClientRepository{
     //для базы данных типа ArrayList
-    Integer createId = 5;
+    private static Integer createId;
 
     @Autowired
     private ParametersHolder parametersHolder;
+    private static List<Client> clientList;
 
 
     public String execute(){
@@ -23,14 +24,15 @@ public class ClientRepositoryImpl implements ClientRepository{
     }
 
 
-
-    List<Client> clientList = new ArrayList<>(Arrays.asList(
-            new Client(1,"Ivan", "Ivanov", 500.0, "user", "BMW"),
-            new Client(2,"Mihail", "Mihailov", 500.0, "user", "Opel"),
-            new Client(3,"Aleks", "Aleksov", 500.0, "user", "Ford"),
-            new Client(4,"Dmitriy", "Dmitriev", 500.0, "user", "Lada"),
-            new Client(5,"Oleg", "Olegov", 500.0, "user", "Chevrolet")));
-
+    static {
+        createId = 5;
+        clientList = new ArrayList<>(Arrays.asList(
+                new Client(1, "Ivan", "Ivanov", 500.0, "user", "BMW"),
+                new Client(2, "Mihail", "Mihailov", 500.0, "user", "Opel"),
+                new Client(3, "Aleks", "Aleksov", 500.0, "user", "Ford"),
+                new Client(4, "Dmitriy", "Dmitriev", 500.0, "user", "Lada"),
+                new Client(5, "Oleg", "Olegov", 500.0, "user", "Chevrolet")));
+    }
 
     public List<Client> findAllClients() {
         return clientList;

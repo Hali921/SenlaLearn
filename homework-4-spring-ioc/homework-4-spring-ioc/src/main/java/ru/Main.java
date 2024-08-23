@@ -9,10 +9,8 @@ import ru.controller.PartController;
 import ru.dto.ClientDTO;
 import ru.dto.PartDTO;
 import ru.models.Manufacture;
-import ru.models.Part;
 import ru.models.PartType;
 
-import java.util.SortedMap;
 
 
 public class Main {
@@ -56,8 +54,6 @@ public class Main {
         partController.deletePart(5);
 
         System.out.println(partController.getAllParts());
-
-        //
 
 
 
